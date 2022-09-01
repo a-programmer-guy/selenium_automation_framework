@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-31T22:04:09 CST" name="Default suite" finished-at="2022-08-31T22:04:09 CST" duration-ms="236">
+  <suite started-at="2022-09-01T11:51:37 CST" name="SauceDemo Suite" finished-at="2022-09-01T11:51:41 CST" duration-ms="3296">
     <groups>
     </groups>
-    <test started-at="2022-08-31T22:04:09 CST" name="Default test" finished-at="2022-08-31T22:04:09 CST" duration-ms="236">
+    <test started-at="2022-09-01T11:51:37 CST" name="SauceDemo Test" finished-at="2022-09-01T11:51:41 CST" duration-ms="3296">
       <class name="testcase.LoginTestFW">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcase.LoginTestFW@13e344d]" started-at="2022-08-31T22:04:07 CST" name="setUp" finished-at="2022-08-31T22:04:09 CST" duration-ms="2133" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcase.LoginTestFW@13e344d]" started-at="2022-09-01T11:51:35 CST" name="setUp" finished-at="2022-09-01T11:51:37 CST" duration-ms="1928" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="LoginTest()[pri:0, instance:testcase.LoginTestFW@13e344d]" started-at="2022-08-31T22:04:09 CST" name="LoginTest" finished-at="2022-08-31T22:04:09 CST" duration-ms="196" status="PASS">
+        <test-method signature="LoginTest()[pri:0, instance:testcase.LoginTestFW@13e344d]" started-at="2022-09-01T11:51:37 CST" name="LoginTest" finished-at="2022-09-01T11:51:41 CST" duration-ms="3256" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase.LoginTestFW@13e344d]" started-at="2022-08-31T22:04:09 CST" name="tearDown" finished-at="2022-08-31T22:04:09 CST" duration-ms="103" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcase.LoginTestFW@13e344d]" started-at="2022-09-01T11:51:41 CST" name="tearDown" finished-at="2022-09-01T11:51:41 CST" duration-ms="103" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testcase.LoginTestFW -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- SauceDemo Test -->
+  </suite> <!-- SauceDemo Suite -->
 </testng-results>

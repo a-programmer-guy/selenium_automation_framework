@@ -1,9 +1,12 @@
 package base;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.apache.commons.collections4.bag.SynchronizedSortedBag;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -19,18 +22,27 @@ public class BaseTest {
 	 * tests. Make them public so they can be accessed outside of this
 	 * class/package. Use TestNG annotations @BeforeTest and @AfterTest to run setup
 	 * and teardown after each test case.
+	 * The properties files hold the definitions for the 
 	 */
 	public static WebDriver driver;
 	public static Properties properties = new Properties();
-	public static FileReader reader;
+	public static Properties locators =  new Properties();
+	public static FileReader prop_reader;
+	public static FileReader loc_reader;
+	// Get the url for the location of the project base directory 
+	public static String projectDirectory = System.getProperty("user.dir");
 
 	@BeforeSuite
 	public void setUp() throws IOException {
-
 		if (driver == null) {
+			
+			// Read in config and locators properties files
+			FileReader prop_reader = new FileReader(projectDirectory + "/src/test/resources/configfiles/config.properties");
+			FileReader loc_reader = new FileReader(projectDirectory + "/src/test/resources/configfiles/locators.properties");
 
-			FileReader reader = new FileReader("/home/kay/Desktop/projects/selenium_automation_framework/src/test/resources/configfiles/config.properties");
-			properties.load(reader);
+			// Load the config and locators files 
+			properties.load(prop_reader);
+			locators.load(loc_reader);
 		}
 		
 		// If the browser value is chrome - set up a chromedriver, etc...
@@ -58,7 +70,7 @@ public class BaseTest {
 	@AfterSuite
 	public void tearDown() {
 		driver.quit();
-		System.out.println("Teardown Successful");
+		System.out.println("-----Teardown Successful-----");
 
 	}
 
